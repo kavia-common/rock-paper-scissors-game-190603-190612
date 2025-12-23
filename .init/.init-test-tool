@@ -1,0 +1,4 @@
+{
+    "command": "npm run test",
+    "working_directory": "/home/kavia/workspace/code-generation/rock-paper-scissors-game-190603-190612/rock_paper_scissors_frontend"
+}
