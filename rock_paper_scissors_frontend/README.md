@@ -13,6 +13,18 @@ This project provides a minimal React template with a clean, modern UI and minim
 
 In the project directory, you can run:
 
+### Backend Integration
+
+This app expects a FastAPI backend running at http://localhost:3001 with a POST /play endpoint that accepts:
+{ "user_choice": "rock" | "paper" | "scissors" }
+and returns:
+{ "user_choice": string, "computer_choice": string, "result": "win" | "lose" | "draw" }
+
+- Default API base URL: http://localhost:3001
+- You can override via environment variable at build time:
+  REACT_APP_API_BASE=http://localhost:3001
+See .env.example for details.
+
 ### `npm start`
 
 Runs the app in development mode.\
