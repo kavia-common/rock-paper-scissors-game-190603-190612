@@ -61,7 +61,8 @@ function App() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ user_choice: choice }),
+        // Backend expects { choice: 'rock'|'paper'|'scissors' }
+        body: JSON.stringify({ choice }),
       });
 
       if (!res.ok) {
@@ -70,8 +71,8 @@ function App() {
       }
 
       const data = await res.json();
-      // Expecting { user_choice, computer_choice, result }
-      setComputerChoice(data.computer_choice ?? null);
+      // Backend responds with { player, computer, result }
+      setComputerChoice(data.computer ?? null);
       setResult(data.result ?? null);
     } catch (e) {
       setError(e.message || 'Something went wrong');

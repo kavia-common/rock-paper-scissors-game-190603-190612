@@ -19,10 +19,10 @@ How to Run (Local)
 
 What the frontend sends
 - Endpoint: POST /play
-- Body: { "user_choice": "rock" | "paper" | "scissors" }
+- Body: { "choice": "rock" | "paper" | "scissors" }
 
 What the frontend expects
-- Response JSON: { "user_choice": string, "computer_choice": string, "result": "win" | "lose" | "draw" }
+- Response JSON: { "player": string, "computer": string, "result": "win" | "lose" | "draw" }
 
 UI Behavior
 - Loading indicator while waiting for the response
